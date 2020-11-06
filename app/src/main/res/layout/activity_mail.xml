@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Mail">
+
+    <LinearLayout
+        android:id="@+id/to"
+        android:weightSum="10"
+        android:layout_margin="10dp"
+        android:background="@drawable/edittext_shap"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_weight="2"
+            android:text="From :"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:paddingLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/mail_from"
+            android:layout_width="0dp"
+            android:textColor="@color/dark_gray"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="roben@gmail.com"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/edittext_shap"
+        android:gravity="center"
+        android:weightSum="10"
+        app:layout_constraintTop_toBottomOf="@+id/to"
+        tools:layout_editor_absoluteX="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="To :"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/mail_to"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/dark_gray"
+            android:layout_weight="8"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="baskeyjames10@gmail.com"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/mail_details"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:textAlignment="textStart"
+        android:hint="Your details"
+        android:textColor="@color/black"
+        android:padding="7dp"
+        android:background="@drawable/edittext_shap"
+        app:layout_constraintBottom_toTopOf="@+id/send_mail_button"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:gravity="start" />
+
+    <Button
+        android:id="@+id/send_mail_button"
+        android:backgroundTint="@color/theme"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="Send"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_shope_two"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
